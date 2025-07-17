@@ -1,10 +1,16 @@
 import { useState } from "react";
-import "./App.css";
+import Navbar from "./Components/Header/Navbar";
+import Footer from "./Components/Footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
