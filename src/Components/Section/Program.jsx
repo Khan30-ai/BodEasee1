@@ -15,7 +15,7 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Programs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Weight Gain Column */}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
