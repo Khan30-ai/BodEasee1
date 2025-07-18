@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +21,9 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About Us" },
-    { path: "/contact", label: "Contact Us" },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About Us" },
+    { id: "contact", label: "Contact Us" },
   ];
 
   return (
@@ -38,7 +39,12 @@ const Navbar = () => {
           {/* Logo and brand name */}
 
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-3">
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={500}
+              className="flex items-center space-x-3"
+            >
               <div className="w-12 h-12 bg-gradient-to-br from-amber-700 to-amber-900 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
                 <span className="text-white font-bold text-xl font-serif">
                   B
@@ -52,20 +58,23 @@ const Navbar = () => {
                   Diet Consultancy
                 </p>
               </div>
-            </Link>
+            </ScrollLink>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="relative text-amber-800 hover:text-amber-600 transition-colors duration-300 font-medium group py-2"
+              <ScrollLink
+                key={link.id}
+                to={link.id}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className=" relative cursor-pointer text-amber-800 hover:text-amber-600 transition-colors duration-300 font-medium group py-2"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </ScrollLink>
             ))}
 
             {/* Dropdown menu for Programs (visible on hover in desktopn view) */}
@@ -181,14 +190,17 @@ const Navbar = () => {
       >
         <div className="px-4 py-6 space-y-4">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
+            <ScrollLink
+              key={link.id}
+              to={link.id}
+              smooth={true}
+              duration={500}
+              offset={-80}
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 text-amber-800 hover:text-amber-600 transition-colors duration-300 font-medium"
             >
               {link.label}
-            </Link>
+            </ScrollLink>
           ))}
 
           {/* Dropdown for Programs */}
