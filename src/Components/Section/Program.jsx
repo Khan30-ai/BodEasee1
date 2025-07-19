@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { TrendingUp, TrendingDown, Sparkles, CheckCircle } from "lucide-react";
 
-const Services = () => {
+const Program = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-amber-900 mb-4">Programs</h2>
+          <h2 className="text-4xl font-bold text-amber-800 sm:text-5xl mb-6 font-serif">
+            Programs
+          </h2>
           <p className="text-lg text-amber-700 max-w-2xl mx-auto">
             Comprehensive nutrition solutions tailored to your unique health
             goals and lifestyle needs
@@ -185,4 +187,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Program;
