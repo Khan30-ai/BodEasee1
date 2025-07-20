@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // 👈 yeh add karo
+      "@": path.resolve(__dirname, "src"),
     },
   },
 });
