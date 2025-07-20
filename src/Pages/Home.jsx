@@ -1,7 +1,8 @@
-import Carousel from "../Components/Ui/Carousel";
-import About from "../Components/Section/About";
-import Program from "../Components/Section/Program";
-import Service from "../Components/Section/Service";
+import Carousel from "@/Components/Ui/Carousel";
+import About from "@/Components/Section/About";
+import Program from "@/Components/Section/Program";
+import Service from "@/Components/Section/Service";
+import Contact from "@/Components/Section/Contact";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
       </section>
       <Program />
       <Service />
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 };
