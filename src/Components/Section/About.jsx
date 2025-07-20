@@ -125,7 +125,7 @@ function About() {
               {/* Video container */}
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-amber-200/50">
                 <video
-                  src="/assets/About.mp4"
+                  src="/assets/Aboutus.mp4"
                   autoPlay
                   muted
                   loop
