@@ -127,29 +127,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* CTA Button links to contact section */}
-          <div className="hidden md:block">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-amber-700 to-amber-900 text-white px-6 py-3 rounded-full font-medium hover:from-amber-800 hover:to-amber-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-flex items-center space-x-2"
-            >
-              <span>Get Started</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
-          </div>
-
           {/* Mobile Menu Button 
           Toggle button to show/hide mobile navigation*/}
           <button
