@@ -6,7 +6,7 @@ const Program = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-amber-800 sm:text-5xl mb-6 font-serif">
             Programs
@@ -17,13 +17,14 @@ const Program = () => {
           </p>
         </div>
 
-        {/* Programs Grid */}
+        {/* Programs Starts */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Weight Loss Column */}
+          {/* Weight Loss  */}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
               <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-amber-800" />
+                <TrendingDown className="w-8 h-8 text-amber-800" />
               </div>
               <h3 className="text-2xl font-bold text-amber-900 mb-2">
                 Weight Loss
@@ -61,23 +62,23 @@ const Program = () => {
                 </p>
               </div>
             </div>
-
+            {/* button */}
             <div className="text-center">
               <Link
                 to="/programs/weight-loss"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-700 text-white font-semibold rounded-full hover:from-orange-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Started
-                <TrendingUp className="ml-2 w-4 h-4" />
+                <TrendingDown className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Weight Loss Column */}
+          {/* Weight Gain*/}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
               <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingDown className="w-8 h-8 text-amber-800" />
+                <TrendingUp className="w-8 h-8 text-amber-800" />
               </div>
               <h3 className="text-2xl font-bold text-amber-900 mb-2">
                 Weight Gain
@@ -115,19 +116,19 @@ const Program = () => {
                 </p>
               </div>
             </div>
-
+            {/* button */}
             <div className="text-center">
               <Link
                 to="/programs/weight-gain"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-700 text-white font-semibold rounded-full hover:from-orange-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Started
-                <TrendingDown className="ml-2 w-4 h-4" />
+                <TrendingUp className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Skin & Hair Column */}
+          {/* Skin & Hair */}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
               <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,11 +165,12 @@ const Program = () => {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Specialized diet plans for skin conditions and hair health
+                  Specialized Diet Plans: Tailored nutrition for specific skin
+                  concerns and hair health
                 </p>
               </div>
             </div>
-
+            {/* button */}
             <div className="text-center">
               <Link
                 to="/programs/skin-hair"
