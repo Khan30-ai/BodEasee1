@@ -19,7 +19,7 @@ const Program = () => {
 
         {/* Programs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Weight Gain Column */}
+          {/* Weight Loss Column */}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
               <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -35,25 +35,29 @@ const Program = () => {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Customized fat-loss diet (based on your needs & kitchen)
+                  Kitchen to Plate Curation: Diets tailored to your existing
+                  kitchen staples no unrealistic shopping lists.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Anti-inflammatory, metabolism-friendly foods
+                  Hormone Friendly Fat Burn: Plans that balance thyroid,
+                  insulin, and cortisol naturally.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Cravings control & energy balance
+                  Metabolic Reset: Gentle detox & gut repair for long term fat
+                  loss (not crash diets).
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Supplement support for fat burn and gut health
+                  Cravings Conscious Eating: satisfying meals to curb emotional
+                  eating
                 </p>
               </div>
             </div>
@@ -85,25 +89,29 @@ const Program = () => {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  A blended diet plan based on your personal health & glow goals
+                  Glow Up Gain Plans: Not just bulk muscle, skin glow, energy,
+                  and mood all improve.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  High-calorie personalized diet with real foods
+                  Real Food, Real Results: No artificial powders pure
+                  nourishment from pantry to plate.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Digestive support and appetite enhancers
+                  Digestive Rescue: For bloating-prone or under eating bodies,
+                  gut first approach.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Supplement guidance for healthy mass gain
+                  Holistic Coaching: Includes stress eating patterns, emotional
+                  blocks, and energy tracking.
                 </p>
               </div>
             </div>
@@ -135,19 +143,22 @@ const Program = () => {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Nutrition plans for radiant skin and healthy hair growth
+                  Inside Out Radiance: Nutrients that make skin glow, hair
+                  thrive, and you feel radiant.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Anti-aging nutrition strategies with antioxidant-rich foods
+                  Antioxidant Defense Plan: Age defying meal plans using
+                  nature’s best protectors.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-600">
-                  Collagen-boosting meal plans for skin elasticity
+                  Beauty Boost Protocols: Collagen, biotin, keratin supported
+                  through everyday foods.
                 </p>
               </div>
               <div className="flex items-start space-x-3">
