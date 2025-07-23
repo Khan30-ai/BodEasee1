@@ -34,20 +34,20 @@ const Contact = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-amber-100 py-16 px-4">
+      <div className="min-h-screen bg-[#faf1ea] py-16 px-9">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl p-12 text-center">
             <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-amber-800 mb-4 font-serif">
               Thank You!
             </h2>
-            <p className="text-lg text-amber-700 mb-8">
+            <p className="text-lg text-amber-900 mb-8">
               Your message has been sent successfully. We'll get back to you
               within 24 hours.
             </p>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="bg-amber-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-300"
+              className="bg-amber-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-800 transition-colors duration-300"
             >
               Send Another Message
             </button>
@@ -58,14 +58,14 @@ const Contact = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-amber-50 to-amber-100 py-4 px-4">
+    <div className="bg-[#faf1ea] py-4 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-4">
           <h1 className="text-5xl font-bold text-amber-800 mb-6 font-serif">
             Contact Us
           </h1>
-          <p className="text-lg text-amber-700 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-amber-900 max-w-3xl mx-auto leading-relaxed font-light">
             Ready to start your wellness journey? Get in touch with our
             certified nutrition experts and let us help you achieve your health
             goals through personalized guidance.
@@ -93,7 +93,7 @@ const Contact = () => {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-4 py-3 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-amber-50/50"
+                    className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-[#faf1ea] "
                     placeholder="Your first name"
                   />
                 </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-4 py-3 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-amber-50/50"
+                    className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-[#faf1ea] "
                     placeholder="Your last name"
                   />
                 </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-amber-50/50"
+                  className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-[#faf1ea] "
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 py-3 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-amber-50/50"
+                  className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-[#faf1ea] "
                   placeholder="+1 (234) 567-890"
                 />
               </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                   name="message"
                   rows={2}
                   required
-                  className="w-full px-4 py-3 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-amber-50/50 resize-none"
+                  className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-[#faf1ea]  resize-none"
                   placeholder="Tell us about your health goals and how we can help you..."
                 ></textarea>
               </div>
@@ -168,7 +168,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-amber-700 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-amber-800 focus:ring-4 focus:ring-amber-300 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-amber-900 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-amber-700 focus:ring-4 focus:ring-amber-300 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -184,7 +184,7 @@ const Contact = () => {
               </button>
             </form>
 
-            <p className="text-sm text-amber-600 mt-4 text-center">
+            <p className="text-sm text-amber-900 mt-4 text-center">
               * Required fields. We respect your privacy and will never share
               your information.
             </p>
