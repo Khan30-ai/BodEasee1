@@ -4,14 +4,16 @@ import { TrendingUp, TrendingDown, Sparkles, CheckCircle } from "lucide-react";
 
 const Program = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+    <section className="py-20 bg-[#faf1ea]">
+      {" "}
+      {/*bg-gradient-to-br from-orange-50 to-amber-50 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
+        {/* Head */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-amber-800 sm:text-5xl mb-6 font-serif">
             Programs
           </h2>
-          <p className="text-lg text-amber-700 max-w-2xl mx-auto">
+          <p className="text-lg text-amber-900 max-w-2xl mx-auto">
             Comprehensive nutrition solutions tailored to your unique health
             goals and lifestyle needs
           </p>
@@ -23,7 +25,7 @@ const Program = () => {
           {/* Weight Loss  */}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
-              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#faf1ea] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingDown className="w-8 h-8 text-amber-800" />
               </div>
               <h3 className="text-2xl font-bold text-amber-900 mb-2">
@@ -66,7 +68,7 @@ const Program = () => {
             <div className="text-center">
               <Link
                 to="/programs/weight-loss"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-700 text-white font-semibold rounded-full hover:from-orange-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-800 to-amber-900 text-white font-semibold rounded-full hover:from-orange-800 hover:to-amber-800  transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Started
                 <TrendingDown className="ml-2 w-4 h-4" />
@@ -77,7 +79,7 @@ const Program = () => {
           {/* Weight Gain*/}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
-              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#faf1ea] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-amber-800" />
               </div>
               <h3 className="text-2xl font-bold text-amber-900 mb-2">
@@ -120,7 +122,7 @@ const Program = () => {
             <div className="text-center">
               <Link
                 to="/programs/weight-gain"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-700 text-white font-semibold rounded-full hover:from-orange-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-800 to-amber-900 text-white font-semibold rounded-full hover:from-orange-800 hover:to-amber-800  transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Started
                 <TrendingUp className="ml-2 w-4 h-4" />
@@ -131,7 +133,7 @@ const Program = () => {
           {/* Skin & Hair */}
           <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
             <div className="text-center mb-6">
-              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#faf1ea] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-8 h-8 text-amber-800" />
               </div>
               <h3 className="text-2xl font-bold text-amber-900 mb-2">
@@ -174,7 +176,7 @@ const Program = () => {
             <div className="text-center">
               <Link
                 to="/programs/skin-hair"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-amber-700 text-white font-semibold rounded-full hover:from-orange-700 hover:to-amber-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-800 to-amber-900 text-white font-semibold rounded-full hover:from-orange-800 hover:to-amber-800  transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Started
                 <Sparkles className="ml-2 w-4 h-4" />
