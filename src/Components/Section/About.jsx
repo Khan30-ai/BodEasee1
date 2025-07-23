@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 py-20">
+    <section className=" bg-gradient-to-br from-[#faf1ea] to-[#f3d8c5] py-20">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center md:gap-16">
           {/* Text Section */}
