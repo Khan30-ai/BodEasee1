@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,16 +22,27 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { id: "home", label: "Home" },
+    { id: "home", label: "Home", Route: "/" },
     { id: "about", label: "About Us" },
     { id: "contact", label: "Contact Us" },
   ];
+  const location = useLocation(); //routing ke liye
+  const navigate = useNavigate();
+
+  const handleNavClick = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-amber-50/90 backdrop-blur-md shadow-lg border-b border-amber-200/50"
+          ? "bg-[#faf1ea]/90 backdrop-blur-md shadow-lg border-b border-[#f3d8c5]/50"
           : "bg-transparent"
       }`}
     >
@@ -38,14 +50,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo and brand name */}
 
-          <div className="flex items-center">
-            <ScrollLink
-              to="home"
-              smooth={true}
-              duration={500}
-              className="flex items-center space-x-3"
+          <div className="flex items-center ">
+            <div
+              onClick={() => {
+                navigate("/", { state: { scrollTo: "top" } });
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }, 400); // slight delay for smoother transition
+              }}
+              className="flex items-center space-x-3 cursor-pointer"
+              style={{ pointerEvents: "auto", cursor: "pointer" }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-700 to-amber-900 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12  bg-[#87532e] rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
                 <span className="text-white font-bold text-xl font-serif">
                   B
                 </span>
@@ -58,23 +74,19 @@ const Navbar = () => {
                   Diet Consultancy
                 </p>
               </div>
-            </ScrollLink>
+            </div>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <ScrollLink
+              <button
                 key={link.id}
-                to={link.id}
-                smooth={true}
-                duration={500}
-                offset={-80}
+                onClick={() => handleNavClick(link.id)}
                 className=" relative cursor-pointer text-amber-800 hover:text-amber-600 transition-colors duration-300 font-medium group py-2"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-              </ScrollLink>
+              </button>
             ))}
 
             {/* Dropdown menu for Programs (visible on hover in desktopn view) */}
@@ -106,19 +118,19 @@ const Navbar = () => {
                 >
                   <Link
                     to="/programs/weight-loss"
-                    className="block px-4 py-2 text-sm text-amber-800 hover:bg-amber-100"
+                    className="block px-4 py-2 text-sm text-amber-800 hover:bg-[#faf1ea]"
                   >
                     Weight Loss
                   </Link>
                   <Link
                     to="/programs/weight-gain"
-                    className="block px-4 py-2 text-sm text-amber-800 hover:bg-amber-100"
+                    className="block px-4 py-2 text-sm text-amber-800 hover:bg-[#faf1ea]"
                   >
                     Weight Gain
                   </Link>
                   <Link
                     to="/programs/skin-hair"
-                    className="block px-4 py-2 text-sm text-amber-800 hover:bg-amber-100"
+                    className="block px-4 py-2 text-sm text-amber-800 hover:bg-[#faf1ea]"
                   >
                     Skin & Hair
                   </Link>
@@ -167,17 +179,16 @@ const Navbar = () => {
       >
         <div className="px-4 py-6 space-y-4">
           {navLinks.map((link) => (
-            <ScrollLink
+            <button
               key={link.id}
-              to={link.id}
-              smooth={true}
-              duration={500}
-              offset={-80}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                handleNavClick(link.id);
+                setIsMenuOpen(false);
+              }}
               className="block py-2 text-amber-800 hover:text-amber-600 transition-colors duration-300 font-medium"
             >
               {link.label}
-            </ScrollLink>
+            </button>
           ))}
 
           {/* Dropdown for Programs */}
@@ -206,16 +217,6 @@ const Navbar = () => {
                 Skin & Hair
               </Link>
             </div>
-          </div>
-
-          <div className="pt-4 border-t border-amber-200">
-            <Link
-              to="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="bg-gradient-to-r from-amber-700 to-amber-900 text-white px-6 py-3 rounded-full font-medium hover:from-amber-800 hover:to-amber-900 transition-all duration-300 shadow-lg w-full text-center inline-block"
-            >
-              Get Started
-            </Link>
           </div>
         </div>
       </div>
