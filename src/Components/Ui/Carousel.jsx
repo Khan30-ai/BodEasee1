@@ -28,12 +28,10 @@ const Carousel = () => {
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/10 to-black/60"></div>
             </div>
 
-            {/* Content Container */}
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
               <div className="flex justify-start">
                 {/* Text Block - Left Aligned */}
                 <div className="w-full md:w-3/5 lg:w-1/2 xl:w-2/5 text-left">
-                  {/* Main Heading */}
                   <h1
                     className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.1] mb-8 tracking-tight drop-shadow-2xl"
                     style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -50,7 +48,6 @@ const Carousel = () => {
                     Yourself.
                   </h1>
 
-                  {/* Subtitle */}
                   <p
                     className="text-white text-lg sm:text-xl lg:text-2xl font-light leading-relaxed mb-12 max-w-2xl drop-shadow-xl"
                     style={{ fontFamily: "Lato, sans-serif" }}
@@ -62,7 +59,7 @@ const Carousel = () => {
                     results that last.
                   </p>
 
-                  {/* Call to Action Buttons */}
+                  {/* CTA*/}
                   <div className="flex flex-col sm:flex-row gap-4 justify-start items-start">
                     <Link to="/programs/weight-loss">
                       <button
@@ -78,7 +75,7 @@ const Carousel = () => {
                     </Link>
                   </div>
 
-                  {/* Decorative Elements - Enhanced with blue colors */}
+                  {/* = Elements */}
                   <div className="absolute -top-16 sm:-top-20 -left-8 sm:-left-10 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-blue-400/25 to-blue-500/25 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
                   <div
                     className="absolute -bottom-12 sm:-bottom-16 -left-12 sm:-left-16 w-18 sm:w-24 h-18 sm:h-24 bg-gradient-to-br from-blue-300/20 to-blue-600/20 rounded-full blur-xl sm:blur-2xl animate-pulse"
@@ -118,7 +115,7 @@ const Carousel = () => {
                   or lean bodies needing real nourishment.
                 </p>
               </div>
-              {/* Call to Action Buttons */}
+              {/* CTA*/}
               <div className="flex flex-col sm:flex-row gap-4 justify-end items-end mt-5">
                 <Link to="/programs/weight-gain">
                   <button
@@ -133,7 +130,7 @@ const Carousel = () => {
                   </button>
                 </Link>
               </div>
-              {/* Decorative Elements */}
+              {/*  Elements */}
               <div className="absolute -top-20 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
               <div
                 className="absolute -bottom-16 -right-16 w-24 h-24 bg-gradient-to-br from-orange-400/15 to-pink-400/15 rounded-full blur-2xl animate-pulse"
@@ -144,23 +141,23 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative w-full h-[90vh] flex items-center justify-end overflow-hidden">
-            {/* Background Image with Enhanced Styling */}
+            {/* Background Image  */}
             <div className="absolute inset-0">
               <img
                 src="/assets/small.png"
                 alt="Heal Your Skin from Within"
                 className="w-full h-full object-cover object-center"
               />
-              {/* Subtle gradient overlay for better text readability */}
+
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/20"></div>
             </div>
 
-            {/* Content Container */}
+            {/*  Container */}
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
               <div className="flex justify-end">
-                {/* Text Block - Right Aligned */}
+                {/* Text */}
                 <div className="w-full md:w-3/5 lg:w-1/2 xl:w-2/5 text-right">
-                  {/* Main Heading */}
+                  {/* Heading */}
                   <h1
                     className="text-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.1] mb-8 tracking-tight"
                     style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -170,7 +167,7 @@ const Carousel = () => {
                       <span className="font-bold bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 bg-clip-text text-transparent">
                         Skin
                       </span>
-                      {/* Decorative underline */}
+
                       <div className="absolute -bottom-2 right-0 w-3/4 h-1 bg-gradient-to-l from-amber-600 to-amber-800 rounded-full opacity-60"></div>
                     </span>
                     <br className="hidden sm:block" />
@@ -178,7 +175,6 @@ const Carousel = () => {
                     <span className="text-amber-700">.</span>
                   </h1>
 
-                  {/* Subtitle */}
                   <p
                     className="text-black/90 text-lg sm:text-xl lg:text-2xl font-light leading-relaxed mb-12 max-w-2xl ml-auto"
                     style={{ fontFamily: "Lato, sans-serif" }}
@@ -190,7 +186,7 @@ const Carousel = () => {
                     imbalances at the root.
                   </p>
 
-                  {/* Call to Action Buttons */}
+                  {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-end items-end">
                     <Link to="/programs/skincare">
                       <button
@@ -206,7 +202,7 @@ const Carousel = () => {
                     </Link>
                   </div>
 
-                  {/* Decorative Elements - Adjusted for mobile */}
+                  {/*  Elements  */}
                   <div className="absolute -top-16 sm:-top-20 -right-8 sm:-right-10 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-amber-400/15 to-amber-600/15 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
                   <div
                     className="absolute -bottom-12 sm:-bottom-16 -right-12 sm:-right-16 w-18 sm:w-24 h-18 sm:h-24 bg-gradient-to-br from-amber-600/10 to-amber-800/10 rounded-full blur-xl sm:blur-2xl animate-pulse"
