@@ -48,7 +48,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo and brand name */}
+          {/* brand name */}
 
           <div className="flex items-center ">
             <div
@@ -89,7 +89,7 @@ const Navbar = () => {
               </button>
             ))}
 
-            {/* Dropdown menu for Programs (visible on hover in desktopn view) */}
+            {/*Dropdown menu for Programs*/}
 
             <div className="relative group">
               <button
@@ -139,8 +139,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button 
-          Toggle button to show/hide mobile navigation*/}
+          {/* Mobile Menu Button
+           */}
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 rounded-lg text-amber-800 hover:bg-amber-100 transition-colors duration-300"
