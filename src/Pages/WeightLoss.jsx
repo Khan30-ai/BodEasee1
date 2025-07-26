@@ -1,12 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
 
 function WeightLoss() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="min-h-screen  bg-gradient-to-br from-[#faf1ea] to-[#f3d8c5] flex flex-col">
       <main className="flex-1 pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
+            {/* Content */}
             <div className="space-y-8 animate-fadeInLeft">
               <div>
                 <h2 className="text-6xl font-bold text-amber-800 mb-8 leading-tight font-serif animate-slideInUp">
@@ -45,7 +49,7 @@ function WeightLoss() {
                 </div>
               </div>
 
-              {/* Key Features */}
+              {/*Features */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-slideInUp">
                 <div className="flex items-center space-x-3 group hover:scale-105 transition-all duration-300">
                   <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
@@ -133,7 +137,7 @@ function WeightLoss() {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/*Image */}
             <div className="flex justify-center animate-fadeInRight -mt-8">
               <div className="relative group">
                 <div className="w-full max-w-lg h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
@@ -148,7 +152,7 @@ function WeightLoss() {
             </div>
           </div>
 
-          {/* WhatsApp Contact Button - Below the grid */}
+          {/* WhatsApp*/}
           <div className="flex justify-center mt-16">
             <div className="flex flex-col items-center space-y-3">
               <p className="text-amber-700 font-medium text-center">
