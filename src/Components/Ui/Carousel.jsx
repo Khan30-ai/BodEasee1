@@ -329,7 +329,7 @@ const Carousel = () => {
                           Get My Skin Glow Plan
                           <CIcon
                             icon={cilArrowRight}
-                            className="ml-2 w-3 h-3 sm:w-4 h-4 md:w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                            className="ml-2 w-3 h-3 sm:w-4 md:w-5  transform transition-transform duration-300 group-hover:translate-x-1"
                           />
                         </button>
                       </Link>
