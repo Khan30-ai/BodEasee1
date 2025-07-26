@@ -142,7 +142,9 @@ function WeightLoss() {
               <div className="relative group">
                 <div className="w-full max-w-lg h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   <img
-                    src="/assets/loss2.jpg"
+                    src="/assets/Loss.jpg"
+                    rel="preload"
+                    as="image"
                     alt="Weight Loss Program"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                   />
