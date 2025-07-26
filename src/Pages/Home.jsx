@@ -17,7 +17,7 @@ const Home = () => {
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100); // slight delay
+      }, 100);
     }
   }, [location]);
 
