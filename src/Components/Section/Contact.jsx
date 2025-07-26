@@ -12,6 +12,9 @@ const Contact = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    {
+      /*submitting form with formspree */
+    }
     try {
       const response = await fetch("https://formspree.io/f/myzpkydz", {
         method: "POST",
@@ -60,7 +63,7 @@ const Contact = () => {
   return (
     <div className="bg-[#faf1ea] py-4 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+        {/* Contact Us */}
         <div className="text-center mb-4">
           <h1 className="text-5xl font-bold text-amber-800 mb-6 font-serif">
             Contact Us
@@ -73,7 +76,7 @@ const Contact = () => {
         </div>
 
         <div className="flex justify-center">
-          {/*Form */}
+          {/*Form starts */}
           <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 w-full max-w-3xl">
             <h2 className="text-2xl font-bold text-amber-800 mb-4 font-serif">
               Send us a Message
