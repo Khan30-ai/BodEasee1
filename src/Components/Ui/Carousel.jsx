@@ -169,8 +169,7 @@ const Carousel = () => {
 
                         <div className="absolute -bottom-2 right-0 w-3/4 h-1 bg-gradient-to-l from-amber-300 to-amber-500 rounded-full opacity-80"></div>
                       </span>
-                      <br className="hidden sm:block" />
-                      from Within
+                      <br className="hidden sm:block" /> from Within
                     </h1>
 
                     <p
