@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Carousel = () => {
   return (
-    <section className="w-full ">
+    <section className="w-full">
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}
@@ -17,23 +17,47 @@ const Carousel = () => {
         pagination={{ clickable: true }}
         className="w-full"
       >
+        {/* Slide 1*/}
         <SwiperSlide>
           <div className="relative w-full h-[90vh] flex items-center justify-start overflow-hidden">
             <div className="absolute inset-0">
-              <img
-                src="/assets/Slide1.png"
-                alt="Weight Loss"
-                rel="preload"
-                as="image"
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/10 to-black/60"></div>
+              <picture>
+                {/* Mobile */}
+                <source
+                  media="(max-width: 768px)"
+                  srcSet="/assets/small1.png"
+                />
+                {/*Bigger screen */}
+                <source
+                  media="(min-width: 769px)"
+                  srcSet="/assets/Slide1.webp"
+                />
+
+                <img
+                  src="/assets/Slide1.png"
+                  alt="Weight Loss"
+                  loading="eager"
+                  className="w-full h-full object-cover object-center"
+                />
+              </picture>
+              {/* this is overlay for desktop */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/10 to-black/60 md:bg-gradient-to-l md:from-transparent md:via-black/10 md:to-black/60"></div>
+              {/* this is overlay for mobile */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent md:hidden"></div>
+
+              <div
+                className="absolute inset-0 z-10 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle at center, transparent 70%, rgba(0,0,0,0.5) 100%)",
+                }}
+              ></div>
             </div>
 
             <div className="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
               <div className="flex justify-start">
-                {/* Text here*/}
-                <div className="w-full md:w-3/5 lg:w-1/2 xl:w-2/5 text-left">
+                {/* Desktop Text */}
+                <div className="hidden md:block w-full md:w-3/5 lg:w-1/2 xl:w-2/5 text-left">
                   <h1
                     className="text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-[1.1] mb-8 tracking-tight drop-shadow-2xl"
                     style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -43,7 +67,7 @@ const Carousel = () => {
                       <span className="font-bold bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
                         Not
                       </span>
-                      {/* An underline */}
+
                       <div className="absolute -bottom-2 left-0 w-3/4 h-1 bg-gradient-to-r from-blue-300 to-blue-500 rounded-full opacity-80 shadow-lg"></div>
                     </span>
                     <br className="hidden sm:block" />
@@ -61,11 +85,11 @@ const Carousel = () => {
                     results that last.
                   </p>
 
-                  {/* CTA*/}
+                  {/*CTA for desktop*/}
                   <div className="flex flex-col sm:flex-row gap-4 justify-start items-start">
                     <Link to="/programs/weight-loss">
                       <button
-                        className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-400/40 text-black font-medium text-base sm:text-lg rounded-full backdrop-blur-sm bg-blue-50/10 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-xl flex items-center"
+                        className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-400/40 text-white font-medium text-base sm:text-lg rounded-full backdrop-blur-sm bg-blue-50/10 transition-all duration-300 hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-xl flex items-center"
                         style={{ fontFamily: "Lato, sans-serif" }}
                       >
                         Start My Weight Loss Plan
@@ -83,22 +107,76 @@ const Carousel = () => {
                     style={{ animationDelay: "1s" }}
                   ></div>
                 </div>
+
+                {/* Mobile Text*/}
+                <div
+                  className="md:hidden absolute top-1/2 -translate-y-1/2 left-6 right-6 text-white"
+                  style={{ textShadow: "0px 2px 8px rgba(0, 0, 0, 0.7)" }}
+                >
+                  <h1
+                    className="text-3xl font-light leading-tight mb-3 tracking-wide"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    Lose Weight, <br />
+                    <span className="font-bold text-blue-300">
+                      Not Yourself
+                    </span>
+                  </h1>
+
+                  <p
+                    className="text-white/90 text-base font-light leading-relaxed mb-6 max-w-xs"
+                    style={{ fontFamily: "Lato, sans-serif" }}
+                  >
+                    Real food. Real results. No starvation.
+                  </p>
+                  {/* CTA for mobile */}
+                  <Link to="/programs/weight-loss">
+                    <button
+                      className="group px-5 py-2.5 bg-white/20 backdrop-blur-md text-white font-medium text-base rounded-full border-2 border-blue-400/40 transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-105 flex items-center w-fit"
+                      style={{ fontFamily: "Lato, sans-serif" }}
+                    >
+                      Start Weight Loss Plan
+                      <CIcon
+                        icon={cilArrowRight}
+                        className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                      />
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </SwiperSlide>
 
+        {/* Slide 2: */}
         <SwiperSlide>
           <div className="relative w-full h-[90vh] flex items-center justify-start">
-            <img
-              src="/assets/Slide2.png"
-              alt="Weight Gain"
-              rel="preload"
-              as="image"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
-            {/* Text here */}
-            <div className="absolute inset-0 flex flex-col items-start justify-center px-10 sm:px-16 lg:px-24 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10">
+            <picture>
+              {/* For Mobile */}
+              <source media="(max-width: 768px)" srcSet="/assets/small2.png" />
+              {/* For bigger screen */}
+              <source media="(min-width: 769px)" srcSet="/assets/Slide2.webp" />
+              <img
+                src="/assets/Slide2.webp"
+                alt="Weight Gain"
+                loading="lazy"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              />
+            </picture>
+
+            {/* overlay for desktop */}
+            <div className="md:hidden absolute inset-0 bg-gradient-to-l from-black/80 via-black/40 to-transparent"></div>
+
+            <div
+              className="absolute inset-0 z-10 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at center, transparent 70%, rgba(0,0,0,0.5) 100%)",
+              }}
+            ></div>
+
+            {/* Desktop Text */}
+            <div className="hidden md:flex absolute inset-0 flex-col items-start justify-center px-10 sm:px-16 lg:px-24 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-10">
               <div className="max-w-4xl">
                 <h1
                   className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-light leading-[0.9] mb-4 sm:mb-6 md:mb-8 tracking-tight"
@@ -118,11 +196,11 @@ const Carousel = () => {
                   or lean bodies needing real nourishment.
                 </p>
               </div>
-              {/* CTA*/}
+              {/* Desktop CTA*/}
               <div className="flex flex-col sm:flex-row gap-4 justify-end items-end mt-5">
                 <Link to="/programs/weight-gain">
                   <button
-                    className="group px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-2 border-white/20 text-black text-sm sm:text-base md:text-lg rounded-full backdrop-blur-md bg-white/5 transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 hover:shadow-xl flex items-center"
+                    className="group px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-2 border-white/20 text-white text-sm sm:text-base md:text-lg rounded-full backdrop-blur-md bg-white/5 transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 hover:shadow-xl flex items-center"
                     style={{ fontFamily: "Lato, sans-serif" }}
                   >
                     I Want Healthy Weight Gain
@@ -140,22 +218,77 @@ const Carousel = () => {
                 style={{ animationDelay: "1s" }}
               ></div>
             </div>
+
+            {/* Mobile overlay  */}
+            <div
+              className="md:hidden absolute bottom-20 right-6 text-white z-20 text-right"
+              style={{ textShadow: "0px 2px 8px rgba(0, 0, 0, 0.7)" }}
+            >
+              <h1
+                className="text-3xl font-light leading-tight mb-3 tracking-wide"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                Gain Weight, <br />
+                <span className="font-bold text-emerald-300">
+                  the Healthy Way
+                </span>
+              </h1>
+
+              <p
+                className="text-white/90 text-base font-light leading-relaxed mb-6 max-w-xs ml-auto"
+                style={{ fontFamily: "Lato, sans-serif" }}
+              >
+                Nourish your body without stress.
+              </p>
+              {/* mobile CTA */}
+
+              <Link to="/programs/weight-gain">
+                <button
+                  className="group px-5 py-2.5 bg-white/20 backdrop-blur-md text-white font-medium text-base rounded-full border-2 border-white/20 transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-105 flex items-center ml-auto w-fit"
+                  style={{ fontFamily: "Lato, sans-serif" }}
+                >
+                  Get Healthy Weight Gain
+                  <CIcon
+                    icon={cilArrowRight}
+                    className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </button>
+              </Link>
+            </div>
           </div>
         </SwiperSlide>
+
+        {/* Slide 3 */}
         <SwiperSlide>
           <div className="relative w-full h-[90vh] flex items-center justify-end overflow-hidden">
-            <img
-              src="/assets/Slide3.png"
-              alt="Skin & Hair"
-              rel="preload"
-              as="image"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
+            <picture>
+              {/* For Mobile */}
+              <source media="(max-width: 768px)" srcSet="/assets/small3.png" />
+              {/* For desktop*/}
+              <source media="(min-width: 769px)" srcSet="/assets/Slide3.webp" />
+              <img
+                src="/assets/Slide3.webp"
+                alt="Skin & Hair"
+                loading="lazy"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              />
+            </picture>
 
-            <div className="absolute inset-0 flex items-center justify-end bg-gradient-to-l from-black/70 via-black/40 to-transparent z-10">
+            {/* desktop overlay */}
+            <div className="md:hidden absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+            <div
+              className="absolute inset-0 z-10 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at center, transparent 70%, rgba(0,0,0,0.5) 100%)",
+              }}
+            ></div>
+
+            <div className="hidden md:flex absolute inset-0 items-center justify-end bg-gradient-to-l from-black/70 via-black/40 to-transparent z-10">
               <div className="w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="flex justify-end">
-                  {/* Text */}
+                  {/* Desktop Text */}
                   <div className="w-full md:w-3/5 lg:w-1/2 xl:w-2/5 text-right">
                     <h1
                       className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-[1.1] mb-6 sm:mb-8 tracking-tight"
@@ -186,17 +319,17 @@ const Carousel = () => {
                       imbalances at the root.
                     </p>
 
-                    {/* CTA */}
+                    {/* Desktop CTA */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-end items-end">
                       <Link to="/programs/skin-hair">
                         <button
-                          className="group px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-2 border-amber-400/40 text-black font-medium text-sm sm:text-base md:text-lg rounded-full backdrop-blur-sm bg-amber-50/10 transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-105 hover:shadow-xl flex items-center"
+                          className="group px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 border-2 border-amber-400/40 text-white font-medium text-sm sm:text-base md:text-lg rounded-full backdrop-blur-sm bg-amber-50/10 transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-105 hover:shadow-xl flex items-center"
                           style={{ fontFamily: "Lato, sans-serif" }}
                         >
                           Get My Skin Glow Plan
                           <CIcon
                             icon={cilArrowRight}
-                            className="ml-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                            className="ml-2 w-3 h-3 sm:w-4 h-4 md:w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
                           />
                         </button>
                       </Link>
@@ -210,6 +343,40 @@ const Carousel = () => {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Mobile overlay  */}
+            <div
+              className="md:hidden absolute bottom-20 left-6 text-white z-20"
+              style={{ textShadow: "0px 2px 8px rgba(0, 0, 0, 0.7)" }}
+            >
+              <h1
+                className="text-3xl font-light leading-tight mb-3 tracking-wide"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                <span className="font-bold text-amber-300">Glow</span> <br />
+                from Within
+              </h1>
+
+              <p
+                className="text-white/90 text-base font-light leading-relaxed mb-6 max-w-xs"
+                style={{ fontFamily: "Lato, sans-serif" }}
+              >
+                Heal skin & hair by fixing the root.
+              </p>
+              {/* mobile CTA */}
+              <Link to="/programs/skin-hair">
+                <button
+                  className="group px-5 py-2.5 bg-white/20 backdrop-blur-md text-white font-medium text-base rounded-full border-2 border-amber-400/40 transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-105 flex items-center w-fit"
+                  style={{ fontFamily: "Lato, sans-serif" }}
+                >
+                  Get My Glow Plan
+                  <CIcon
+                    icon={cilArrowRight}
+                    className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
