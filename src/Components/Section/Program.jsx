@@ -6,9 +6,8 @@ const Program = () => {
   return (
     <section className="py-20 bg-[#faf1ea]">
       {" "}
-      {/*bg-gradient-to-br from-orange-50 to-amber-50 */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Head */}
+        {/* Programs */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-amber-800 sm:text-5xl mb-6 font-serif">
             Programs
