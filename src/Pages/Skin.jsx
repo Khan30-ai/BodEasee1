@@ -143,7 +143,9 @@ function WeightLoss() {
                 <div className="w-full max-w-lg h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   <img
                     src="/assets/skin.jpg"
-                    alt="Weight Loss Program"
+                    alt="Skin & Hair Program"
+                    rel="preload"
+                    as="image"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-amber-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
