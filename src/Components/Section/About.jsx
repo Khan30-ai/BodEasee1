@@ -5,7 +5,7 @@ function About() {
     <section className=" bg-gradient-to-br from-[#faf1ea] to-[#f3d8c5] py-20">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center md:gap-16">
-          {/* Text Section */}
+          {/* Text goes here */}
           <div className="transform transition-all duration-700 hover:translate-x-2">
             <div className="max-w-lg md:max-w-none">
               <h2 className="text-4xl font-bold text-amber-800 sm:text-5xl mb-6 font-serif">
@@ -30,7 +30,7 @@ function About() {
                   evidence-based nutrition strategies that deliver real results.
                 </p>
 
-                {/* Features */}
+                {/*Features */}
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg">
@@ -116,13 +116,13 @@ function About() {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Video*/}
           <div className="flex justify-center transform transition-all duration-700 hover:scale-105">
             <div className="relative">
               {/* Decorative background */}
               <div className="absolute -inset-4 bg-gradient-to-br from-amber-400/20 to-amber-700/20 rounded-3xl blur-2xl"></div>
 
-              {/* Video container */}
+              {/*container */}
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-amber-200/50">
                 <video
                   src="/assets/Aboutus.mp4"
@@ -135,11 +135,6 @@ function About() {
                   style={{ aspectRatio: "9/16" }}
                 />
               </div>
-
-              {/* Decorative floating elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-amber-400/30 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-amber-600/30 rounded-full blur-xl animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 -left-8 w-8 h-8 bg-orange-400/40 rounded-full blur-lg animate-pulse delay-500"></div>
             </div>
           </div>
         </div>
