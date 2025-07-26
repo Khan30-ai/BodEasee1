@@ -22,7 +22,9 @@ const Carousel = () => {
             <div className="absolute inset-0">
               <img
                 src="/assets/Slide1.png"
-                alt="Lose Weight, Not Yourself"
+                alt="Weight Loss"
+                rel="preload"
+                as="image"
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/10 to-black/60"></div>
@@ -90,7 +92,9 @@ const Carousel = () => {
           <div className="relative w-full h-[90vh] flex items-center justify-start">
             <img
               src="/assets/Slide2.png"
-              alt="Slide 1"
+              alt="Weight Gain"
+              rel="preload"
+              as="image"
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
             {/* Text here */}
@@ -142,7 +146,9 @@ const Carousel = () => {
           <div className="relative w-full h-[90vh] flex items-center justify-end overflow-hidden">
             <img
               src="/assets/Slide3.png"
-              alt="Heal Your Skin from Within"
+              alt="Skin & Hair"
+              rel="preload"
+              as="image"
               className="absolute top-0 left-0 w-full h-full object-cover"
             />
 
