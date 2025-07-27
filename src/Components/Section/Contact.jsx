@@ -147,7 +147,7 @@ const Contact = () => {
                   id="phone"
                   name="phone"
                   className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-400 focus:border-transparent transition-all duration-300 bg-[#faf1ea] "
-                  placeholder="+1 (234) 567-890"
+                  placeholder="+91 98765 43210"
                 />
               </div>
 
