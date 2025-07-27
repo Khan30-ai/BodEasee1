@@ -143,7 +143,7 @@ const Navbar = () => {
            */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg text-amber-800 hover:bg-amber-100 transition-colors duration-300"
+            className="md:hidden p-2 rounded-lg text-amber-800 hover:bg-[#faf1ea] transition-colors duration-300"
           >
             <svg
               className="w-6 h-6"
@@ -175,7 +175,7 @@ const Navbar = () => {
       <div
         className={`md:hidden transition-all duration-300 ${
           isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        } overflow-hidden bg-amber-50/95 backdrop-blur-md border-t border-amber-200/50`}
+        } overflow-hidden bg-[#faf1ea] backdrop-blur-md border-t border-amber-200/50`}
       >
         <div className="px-4 py-6 space-y-4">
           {navLinks.map((link) => (
