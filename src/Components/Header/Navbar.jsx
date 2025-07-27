@@ -61,16 +61,16 @@ const Navbar = () => {
               className="flex items-center space-x-3 cursor-pointer"
               style={{ pointerEvents: "auto", cursor: "pointer" }}
             >
-              <div className="w-12 h-12  bg-[#87532e] rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
-                <span className="text-white font-bold text-xl font-serif">
-                  B
-                </span>
-              </div>
+              <img
+                src="/assets/logo.jpg"
+                alt="Company Logo"
+                className="w-12 h-12 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 object-cover"
+              />
               <div>
-                <h1 className="text-2xl font-bold text-amber-800 font-serif">
+                <h1 className="text-2xl font-bold text-[#441408] font-serif">
                   BodEase
                 </h1>
-                <p className="text-xs text-amber-600 font-medium">
+                <p className="text-xs text-[#663a1f] font-medium">
                   Diet Consultancy
                 </p>
               </div>
