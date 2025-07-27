@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, Instagram } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -35,59 +36,69 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold text-amber-900 mb-8 tracking-wide">
               Get in Touch
             </h3>
-            <div className="flex flex-col space-y-6">
-              <a
-                href="mailto:bodeaseee@gmail.com"
-                className="flex items-center group cursor-pointer hover:scale-105 transition-transform duration-300"
-              >
-                <div className="bg-white p-4 rounded-full mr-4 group-hover:bg-[#faf1ea] transition-colors duration-300">
-                  <Mail className="w-6 h-6 text-amber-900" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-amber-900 uppercase tracking-wide">
-                    Email
-                  </p>
-                  <p className="text-lg font-light text-black group-hover:text-amber-800 transition-colors duration-300">
-                    bodeaseee@gmail.com
-                  </p>
-                </div>
-              </a>
+            <div className="flex-shrink-0">
+              <h3 className="text-2xl font-semibold text-amber-900 mb-8 tracking-wide">
+                Get in Touch
+              </h3>
+              <div className="flex flex-col space-y-6">
+                {/* Email */}
+                <a
+                  href="mailto:bodeaseee@gmail.com"
+                  className="flex items-center group cursor-pointer hover:scale-105 transition-transform duration-300"
+                >
+                  <div className="bg-white p-4 rounded-full mr-4 group-hover:bg-[#faf1ea] transition-colors duration-300">
+                    <Mail className="w-6 h-6 text-amber-900" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-amber-900 uppercase tracking-wide">
+                      Email
+                    </p>
+                    <p className="text-lg font-light text-black group-hover:text-amber-800 transition-colors duration-300">
+                      bodeaseee@gmail.com
+                    </p>
+                  </div>
+                </a>
 
-              <a
-                href="tel:+919748255760"
-                className="flex items-center group cursor-pointer hover:scale-105 transition-transform duration-300"
-              >
-                <div className="bg-white p-4 rounded-full mr-4 group-hover:bg-[#faf1ea] transition-colors duration-300">
-                  <Phone className="w-6 h-6 text-amber-900" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-amber-900 uppercase tracking-wide">
-                    Phone
-                  </p>
-                  <p className="text-lg font-light text-black group-hover:text-amber-800 transition-colors duration-300">
-                    +91 9748255760
-                  </p>
-                </div>
-              </a>
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/919748255760"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center group cursor-pointer hover:scale-105 transition-transform duration-300"
+                >
+                  <div className="bg-white p-4 rounded-full mr-4 group-hover:bg-[#faf1ea] transition-colors duration-300">
+                    <FaWhatsapp className="w-6 h-6 text-amber-900" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-amber-900 uppercase tracking-wide">
+                      WhatsApp
+                    </p>
+                    <p className="text-lg font-light text-black group-hover:text-amber-800 transition-colors duration-300">
+                      +91 9748255760
+                    </p>
+                  </div>
+                </a>
 
-              <a
-                href="https://instagram.com/bodeasee"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center group cursor-pointer hover:scale-105 transition-transform duration-300"
-              >
-                <div className="bg-white p-4 rounded-full mr-4 group-hover:bg-[#faf1ea] transition-colors duration-300">
-                  <Instagram className="w-6 h-6 text-amber-900" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-amber-900 uppercase tracking-wide">
-                    Instagram
-                  </p>
-                  <p className="text-lg font-light text-black group-hover:text-amber-800 transition-colors duration-300">
-                    @bodeasee
-                  </p>
-                </div>
-              </a>
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com/bodeasee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center group cursor-pointer hover:scale-105 transition-transform duration-300"
+                >
+                  <div className="bg-white p-4 rounded-full mr-4 group-hover:bg-[#faf1ea] transition-colors duration-300">
+                    <Instagram className="w-6 h-6 text-amber-900" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-amber-900 uppercase tracking-wide">
+                      Instagram
+                    </p>
+                    <p className="text-lg font-light text-black group-hover:text-amber-800 transition-colors duration-300">
+                      @bodeasee
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
