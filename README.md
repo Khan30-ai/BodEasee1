@@ -65,3 +65,11 @@ Make sure you have the following installed:
 6. **Start the development server**
    ```bash
    npm run dev
+## 👤 Author
+
+**Md Arshi Khan**  
+ MERN Developer  
+
+- GitHub: https://github.com/Khan30-ai  
+- LinkedIn: https://www.linkedin.com/in/md-arshi-khan-754981221/ 
+- Email: arshikhan80708@gmail.com
