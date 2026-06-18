@@ -70,6 +70,5 @@ Make sure you have the following installed:
 **Md Arshi Khan**  
  MERN Developer  
 
-- GitHub: https://github.com/Khan30-ai  
 - LinkedIn: https://www.linkedin.com/in/md-arshi-khan-754981221/ 
 - Email: arshikhan80708@gmail.com
